@@ -239,12 +239,12 @@ footer{background:#0b1d32;color:#b7c0cb;padding:34px 0;font-size:13px}
     </div>
     <div class="form">
       <h3>빠른 상담 신청</h3>
-      <form onsubmit="return demoSubmit(event)">
-        <div class="field"><label for="name">성함</label><input id="name" required placeholder="성함을 입력해 주세요"></div>
-        <div class="field"><label for="phone">연락처</label><input id="phone" required placeholder="010-0000-0000" inputmode="tel"></div>
+      <form action="https://formspree.io/f/xnpadnew" method="POST">
+        <div class="field"><label for="name">성함</label><input id="name" name="성함" required placeholder="성함을 입력해 주세요"></div>
+        <div class="field"><label for="phone">연락처</label><input id="phone" name="연락처" required placeholder="010-0000-0000" inputmode="tel"></div>
         <div class="field">
           <label for="type">상담 분야</label>
-          <select id="type">
+          <select id="type" name="상담분야">
             <option>거래처 미수금</option>
             <option>대여금</option>
             <option>공사대금</option>
@@ -253,8 +253,8 @@ footer{background:#0b1d32;color:#b7c0cb;padding:34px 0;font-size:13px}
             <option>기타 채권추심</option>
           </select>
         </div>
-        <div class="field"><label for="amount">채권 금액</label><input id="amount" placeholder="예: 5,000만원"></div>
-        <div class="field"><label for="memo">상담 내용</label><textarea id="memo" placeholder="언제부터, 어떤 이유로 돈을 받지 못했는지 간단히 적어 주세요."></textarea></div>
+        <div class="field"><label for="amount">채권 금액</label><input id="amount"  name="채권금액" placeholder="예: 5,000만원"></div>
+        <div class="field"><label for="memo">상담 내용</label><textarea id="memo" name="상담내용" placeholder="언제부터, 어떤 이유로 돈을 받지 못했는지 간단히 적어 주세요."></textarea></div>
         <button class="submit" type="submit">상담 신청하기</button>
         <div class="notice">개인정보 수집·이용 동의 문구 및 실제 상담 접수 기능은 홈페이지 서버/폼 서비스와 연동해 적용해야 합니다.</div>
       </form>
